@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TGBraider</title>
+    <title>Super browser</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,22 +13,25 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background: linear-gradient(120deg, #2980b9, #8e44ad);
             color: white;
             text-align: center;
+            overflow: hidden;
         }
         h1 {
             font-size: 4em;
             margin: 0.5em;
             animation: fadeIn 2s ease-in-out;
+            z-index: 2;
         }
         h2 {
             font-size: 1.5em;
             margin: 0.5em;
             animation: fadeIn 3s ease-in-out;
+            z-index: 2;
         }
         .button-container {
             margin-top: 20px;
+            z-index: 2;
         }
         .button {
             background-color: #e74c3c;
@@ -57,11 +60,34 @@
                 transform: translateY(0);
             }
         }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .blur-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 60%;
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
-    <h1>TGBraider</h1>
-    <h2>The best Discord no admin raider. By ThatGodlyBacon.</h2>
+    <div class="video-background">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WX8BdH1EAGE?autoplay=1&mute=1&loop=1&playlist=WX8BdH1EAGE&controls=0&showinfo=0&rel=0&modestbranding=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div class="blur-overlay"></div>
+    <h1>Super browser</h1>
+    <h2>The best browser ever.</h2>
     <div class="button-container">
         <a href="https://download1523.mediafire.com/ek125jl685tgLYUhyuvQJOYlSEK3fTkwfzdwB2S7cHuE-rLxDatR3FJaphcYUgdj_4ytGiAhay8srnQAeA6dsszgtEffPOta3DPhCjdCdeBLWvlJnQPeQSxK48Hklmr1W4nJWUbyYV25vtC7utTnY6QZashqpkE7ne0PlSM0wSay/029idmn6bs4wjuk/TGBraiderSetup.exe" class="button">Download now</a>
         <a href="https://dc.gg/teamgodlybacons" class="button">Discord</a>
